@@ -1,0 +1,49 @@
+.Logo img{
+    width: 80px;
+}
+
+.Navbar-Right a i{
+    font-size: 24px;
+}
+
+.Hero-Section {
+    background-image: url('./assets/Hero-Section.png');
+    width: 100%;
+    height: calc(100vh - 107px);
+    background-size: cover;
+    background-position: center 90%; 
+    background-repeat: no-repeat;
+}
+
+.Hero-Title{
+    font-size: 66px;
+}
+
+.Hero-Tagline{
+    font-size: 20px;
+}
+
+.Blog , 
+.Featured-Menu{
+    background-color: #0D0D0D;
+}
+.blogTitle{
+    font-size: 50px;
+}
+
+.videoContent{
+    color: #EEEEEE;
+    line-height: 1.8;
+}
+
+.featuredTitle{
+    font-size: 50px;
+}
+
+.featured-menu-nav-links{
+    transition: all 0.3s ease;
+}
+.featured-menu-nav-links:hover{
+    color: #FF6F61;
+    transform: scale(1.1);
+}

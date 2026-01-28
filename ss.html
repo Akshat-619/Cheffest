@@ -1,0 +1,248 @@
+<div class="row">
+    <div class="col-md-12">
+        <div>
+            <div class="alert alert-success" id="success">
+                <strong>Record Saved Successfully!</strong>
+            </div>
+            <div class="alert alert-success" id="update">
+                <strong>Record Updated Successfully!</strong>
+            </div>
+            <div class="alert alert-warning" id="warning">
+                <strong>Record Already Exists!</strong>
+            </div>
+            <div class="alert alert-danger" id="danger">
+                <strong>Sorry!</strong>Something went wrong.
+            </div>
+        </div>
+
+        <div class="panel" id="pnlODStatus">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="panel panel-info">
+                        <div class="panel-heading">
+                            Establishment > Transaction > Application > Missed Punch Request Application
+                              @*<a type="button" id="show" title="Click here for information" style="cursor: pointer" class="pull-right">
+                                  <i class="glyphicon glyphicon-info-sign"></i>
+                              </a>*@
+                        </div>
+                        <div class="panel-body">
+                            <div id="message" role="alert"></div>
+                            <div class="alert alert-warning" role="alert" id="label-warning" @*style="display:none"*@>
+                            </div>
+
+                            <div class="alert alert-danger" role="alert" id="label-danger" @*style="display:none"*@>
+                            </div>
+
+                            <div class="alert alert-success" role="alert" id="label-success">
+                            </div>
+
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <div class="form-horizontal">
+                                        <div class="form-group">
+                                            <div class="col-sm-12">
+                                                <div class="col-sm-4" id="new">
+                                                    <input type="button" id="btnLink" class="btn btn-primary" tabindex="1" value="New Missed Punch Request Application" />
+
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="row">
+                                <div class="form-group">
+                                    <div class="col-sm-12">
+                                        <input type="hidden" id="hdnMissedPunchLeaveApplicationId" value="0" />
+                                        <input type="hidden" id="hdnSocUser" value="@Session["SOC_USER"]"/>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="row">
+                                <div class="col-md-12 form-group">
+                                    <div id="divGridTable" style="visibility: hidden">
+                                        <div class="form-horizontal">
+                                            <div class="row" style="border: solid 1px #CCCCCC">
+                                                @*<div class="table-responsive">*@
+                                                <table class="table table-striped table-bordered dt-responsive nowrap" id="example" style="width: 100%">
+                                                    <thead>
+                                                        @* <tr class="bg-light-blue">*@
+                                                        <tr>
+                                                            <th class="bg-light-blue" style="width: 5%">Edit</th>
+                                                            @*                                                            <th class="bg-light-blue" style="width: 5%">REPORT</th>*@
+                                                            <th class="bg-light-blue" style="width: 15%">Missed Punch Date</th>
+                                                            <th class="bg-light-blue" style="width: 15%">Intime</th>
+                                                            <th class="bg-light-blue" style="width: 15%">OutTime </th>
+                                                            <th class="bg-light-blue" style="width: 20%">Remark</th>
+                                                            <th class="bg-light-blue" style="width: 20%">Status</th>
+                                                        </tr>
+                                                    </thead>
+                                                    <tbody l̥l̥></tbody>
+                                                </table>
+                                                @*  </div>*@
+                                                @*</div>*@
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+
+        <div id="pnlAddUpdate">
+            <div class="row">
+                <div class="col-md-12">
+                    <br />
+                    <div class="panel panel-info">
+                        <div class="panel-heading">
+                            Establishment > Transaction > Application > Missed Punch Request Application
+                        </div>
+                        <div class="panel-body">
+                            <div class="form-group">
+                                <div class="col-sm-12">
+                                    Note 1)<b>:</b> <span style="color: #FF0000">* Marked Is Mandatory !</span><br>
+                                   &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp 2)<b>:</b> <span style="color: #FF0000">* InTime and OutTime Should be 24 hour Format ! example : for 6 Pm should be 18:00</span><br><br>
+                                </div>
+                            </div>
+                            <br />
+                            <div class="row">
+
+                                <div class="col-md-12">
+                                    <div class="form-horizontal">
+
+                                        <div class="form-group" id="divAppDate" runat="server">
+                                            <div class="col-sm-12">
+                                                <div class="col-sm-6">
+                                                    <div class="col-sm-4">
+                                                        Missed Punch Date
+                                                        <span style="color: #FF0000; font-weight: bold">*</span>
+                                                    </div>
+                                                    <div class="col-sm-8">
+                                                        <div class="input-group">
+                                                            <input type="text" id="txtFromDate" name="txtFromDate" placeholder="Please Enter Missed Punch Date" class="form-control datePicker" tabindex="8" data-inputmask="'alias': 'date'" />
+                                                            <span class="input-group-addon"><i><a href="#"><i id="imgFromdt" class="fa fa-calendar"></i></a></i></span>
+
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+
+
+
+                                        <div id="pnlIntimeOutime">
+                                            <div class="form-group">
+                                                <div class="col-sm-12">
+                                                    <div class="col-sm-6" id="visitintime">
+                                                        <div class="col-sm-4">
+                                                            In Time 
+                                                             <span style="color: #FF0000; font-weight: bold">*</span>
+                                                        </div>
+                                                        <div class="col-sm-8">
+                                                            <input type="time" id="txtIntime" class="form-control" tabindex="12" />
+
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-sm-6" id="visitouttime">
+                                                        <div class="col-sm-4">
+                                                            Out Time 
+                                                             <span style="color: #FF0000; font-weight: bold">*</span>
+                                                        </div>
+                                                        <div class="col-sm-8">
+                                                            <input type="time" id="txtOuttime" class="form-control" tabindex="13" />
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                        </div>
+
+                                        <div class="form-group">
+                                            <div class="col-sm-12">
+
+                                                <div class="col-sm-6" id="Natureofwork">
+                                                    <div class="col-sm-4">
+                                                        Reason
+                                                         <span style="color: #FF0000; font-weight: bold">*</span>
+                                                    </div>
+                                                    <div class="col-sm-8">
+                                                        <select id="ddlReason" class="form-control" tabindex="4">
+                                                            <option value="-1" class="loadingDdl" selected="selected">Loading...</option>
+                                                        </select>
+                                                    </div>
+
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="form-group">
+                                            <div class="col-sm-12">
+                                                <div class="col-sm-6">
+                                                    <div class="col-sm-4">
+                                                        Remark
+                                                         <span style="color: #FF0000; font-weight: bold">*</span>
+                                                    </div>
+                                                    <div class="col-sm-8">
+                                                        <textarea id="txtReason" class="form-control" placeholder="Enter Reason" tabindex="9" onkeypress="return CheckAlphaOnly(event,this)" maxlength="259"></textarea>
+                                                    </div>
+                                                </div>
+
+                                                <div class="col-sm-6">
+                                                    <div class="col-sm-4">
+                                                        Active
+                                                    </div>
+                                                    <div class="col-sm-8 ">
+                                                        <input type="checkbox" id="IsActive" name="IsActive" checked="checked" style="position: absolute; opacity: 1;" tabindex="17" />
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="form-group">
+                                            <div class="col-sm-12">
+                                                <div class="col-sm-6" id="path">
+                                                    <div class="col-sm-4">
+                                                        Path
+                                                    </div>
+                                                    <div class="col-sm-8">
+                                                        <input type="text" id="txtPath" class="form-control" placeholder="Missed Punch Approval Path" tabindex="16" disabled="disabled" />
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="form-group">
+                                            <div class="col-sm-12">
+                                                <div class="col-sm-4">
+                                                </div>
+                                                <div class="col-sm-8">
+                                                    <input type="button" id="btnSave" class="btn btn-primary" value="Save" tabindex="18" title="Click to Save" />
+                                                    <input type="button" id="btnCancel" class="btn btn-warning" value="Cancel" tabindex="19" title="Click to Cancel" />
+                                                    <input type="button" id="btnBack" class="btn btn-info" value="Back" tabindex="20" title="Click to Back" />
+                                                    <input type="hidden" id="EstbPassingAuthorityId" value="0" />
+                                                    <input type="hidden" id="action" value="0" />
+                                                    <input type="hidden" id="hdnEmployeeId" value="0" />
+                                                    <input type="hidden" id="hdnCollegeBiometricNo" value="0" />
+                                                    <input type="hidden" id="hdnMissedPunchApplicationId" value="0" />
+
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
