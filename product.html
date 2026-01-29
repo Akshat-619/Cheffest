@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>3D Product Card</title>
+
+    <style>
+        /* From Uiverse.io by eslam-hany */
+        /* .ProductCard {
+            position: relative;
+            width: 330px;
+            height: 340px;
+            background-color: whitesmoke;
+            border-radius: 10px;
+            box-shadow: 1px 1px 12px #000;
+            perspective: 2000px;
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #000;
+        } */
+/* 
+        .productcardCover {
+            position: absolute;
+            inset: 0;
+            background-color: lightgray;
+            border-radius: 10px;
+            cursor: pointer;
+            transition: transform 0.5s;
+            transform-origin: left center;
+            transform-style: preserve-3d;
+            box-shadow: 1px 1px 12px #000;
+
+            align-items: center;
+            justify-content: center;
+        } */
+
+        /* .ProductCard:hover .productcardCover {
+            transform: rotateY(-80deg);
+        }
+
+        p {
+            font-size: 20px;
+            font-weight: bold;
+        } */
+
+
+        /* .productImg {
+            background-image: url('./assets/product-card-bg.jpg');
+            object-fit: cover;
+            background-size: cover;
+            overflow: hidden;
+        }
+
+        .productImg img {
+            object-fit: cover;
+            width: 100%;
+            height: 100%;
+        } */
+
+        /* .productName {
+            font-size: 30px;
+        } */
+
+        /* .productPrice {
+            font-size: 25px;
+            color: red;
+            margin-top: 5px;
+        } */
+        .ProductBadges .badge{
+            background-color: green;
+            color: white;
+            padding: 5px;
+            border-radius: 12px;
+            font-size: 12px;
+        }
+
+        /* .productTitle{
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 3px;
+        } */
+
+    </style>
+</head>
+
+<body>
+
+    <div class="ProductCard">
+        <p>Hello</p>
+
+        <div class="productcardCover">
+            <div class="productImg">
+                <img class="" src="./assets/Product_img-1.png" alt="">
+            </div>
+               <div class="productTitle">
+                      <div class="productName">
+                Naan Bread
+            </div>
+            <div class="ProductBadges">
+                <span class="badge">Veg</span>
+            </div>
+               </div>
+      
+
+            <div class="productFooter ">
+                <div class="productPrice ">
+                    $1.85
+                </div>
+                <div class="atcBtn">
+                    <i class="bi bi-cart"></i>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</body>
+
+</html>
