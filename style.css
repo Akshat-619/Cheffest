@@ -55,7 +55,7 @@ body {
 /* Product Card Styles */
 .ProductCard {
     width: 330px;
-    height: 300px;
+    height: 325px;
 border: 1px solid black;
     perspective: 2000px;
 }
@@ -70,7 +70,7 @@ border: 1px solid black;
 }
 
 .ProductCard:hover .productcardCover {
-    transform: rotateY(-85deg);
+    transform: rotateY(-85.3deg);
 }
 
 .productImg {
@@ -88,4 +88,8 @@ border: 1px solid black;
 
  .atcBtn i{
     font-size: 24px;
+ }
+
+ .productSpecs{
+
  }
